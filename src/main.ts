@@ -27,6 +27,8 @@ const DEFAULT_STATE: WhereAmIState = {
   socialAnalyzerChildren: {},
 };
 
+const EXCEL_VIEW_TYPE = "excel-view";
+
 export default class WhereAmIPlugin extends Plugin {
   canvas: any = null;
   intervalTimer = new Map<string, NodeJS.Timeout>();
@@ -76,6 +78,7 @@ export default class WhereAmIPlugin extends Plugin {
     this.registerCoreCommands();
     this.registerContextMenus();
     this.registerCanvasInteractionGuards();
+    this.registerExcelSheetViewRouting();
     this.sync.start();
   }
 
@@ -229,6 +232,37 @@ export default class WhereAmIPlugin extends Plugin {
     this.keymap.registerAll();
     this.registerBlurCommand();
     this.scheduleMainNodeStyleApply();
+  }
+
+  private registerExcelSheetViewRouting() {
+    const maybeRouteActiveLeaf = () => {
+      const leaf = this.app.workspace.activeLeaf;
+      if (!leaf) return;
+
+      const viewAny = leaf.view as {
+        file?: TFile;
+        getViewType?: () => string;
+        getState?: () => Record<string, unknown>;
+      };
+      const file = viewAny.file;
+      if (!file || !this.isSheetMarkdown(file)) return;
+      if (typeof viewAny.getViewType === "function" && viewAny.getViewType() === EXCEL_VIEW_TYPE) return;
+
+      const state = typeof viewAny.getState === "function" ? viewAny.getState() : {};
+      void leaf.setViewState({
+        type: EXCEL_VIEW_TYPE,
+        state,
+        active: true,
+      });
+    };
+
+    this.registerEvent(this.app.workspace.on("file-open", () => maybeRouteActiveLeaf()));
+    this.registerEvent(this.app.workspace.on("active-leaf-change", () => maybeRouteActiveLeaf()));
+    this.app.workspace.onLayoutReady(() => maybeRouteActiveLeaf());
+  }
+
+  private isSheetMarkdown(file: TFile): boolean {
+    return file.extension === "md" && /\.sheet$/i.test(file.basename);
   }
 
   private scheduleMainNodeStyleApply() {

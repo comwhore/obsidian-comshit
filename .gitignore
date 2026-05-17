@@ -1,14 +1,15 @@
 # Dependencies
 node_modules/
 
-# Build output
-main.js
-styles.css
+# Build output (plugin root only)
+/main.js
+/styles.css
 *.map
 src/generated/excelBundle.ts
 
 # Obsidian plugin data
 data.json
+excel-modded/data.json
 
 # Optional vendored OSINT tree (see README)
 social-analyzer-main/
