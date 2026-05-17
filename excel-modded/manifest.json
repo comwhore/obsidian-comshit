@@ -1,0 +1,11 @@
+{
+	"id": "excel",
+	"name": "Excel (embedded sources)",
+	"version": "1.3.24",
+	"minAppVersion": "0.15.0",
+	"description": "Bundled Excel plugin sources (modded). Upstream spreadsheet plugin by ljcoder; packaged here for comshit merge.",
+	"author": "comwhore",
+	"authorUrl": "",
+	"fundingUrl": "",
+	"isDesktopOnly": false
+}

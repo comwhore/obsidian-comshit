@@ -1,0 +1,11 @@
+comshit includes logic derived from Lovely-Mindmap:
+https://github.com/shaunhurryup/lovely-mindmap
+Licensed under MIT.
+
+comshit can integrate with Sherlock CLI:
+https://github.com/sherlock-project/sherlock
+Sherlock is a separate program and is not bundled.
+
+The `excel-modded/` folder embeds sources from the Excel Obsidian plugin fork/mod; see that subtree for its own notices and licenses.
+
+Use Sherlock responsibly and respect website Terms of Service and local laws.

@@ -1,0 +1,11 @@
+{
+  "id": "comshit",
+  "name": "comshit",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.16",
+  "description": "Extend Canvas with mindmap shortcuts, paired Markdown sync, OSINT child nodes, and embedded .sheet spreadsheets.",
+  "author": "comwhore",
+  "authorUrl": "https://github.com/comwhore",
+  "helpUrl": "https://github.com/comwhore/obsidian-comshit#readme",
+  "isDesktopOnly": true
+}

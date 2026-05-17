@@ -1,0 +1,37 @@
+{
+  "name": "obsidian-comshit",
+  "version": "1.0.0",
+  "description": "Canvas mindmap shortcuts, paired Markdown sync, OSINT tools, and embedded spreadsheets for Obsidian.",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/comwhore/obsidian-comshit.git"
+  },
+  "scripts": {
+    "dev": "node scripts/generate-excel-bundle.mjs && node esbuild.config.mjs",
+    "build": "node scripts/generate-excel-bundle.mjs && node esbuild.config.mjs production",
+    "version": "node version-bump.mjs && git add manifest.json versions.json"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "canvas",
+    "mindmap",
+    "sherlock",
+    "comshit"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "@typescript-eslint/eslint-plugin": "^8.30.1",
+    "@typescript-eslint/parser": "^8.30.1",
+    "builtin-modules": "^5.0.0",
+    "esbuild": "^0.25.3",
+    "obsidian": "latest",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "autobind-decorator": "^2.4.0"
+  }
+}
