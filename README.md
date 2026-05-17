@@ -8,7 +8,8 @@
 - Paired Markdown and Canvas sync (bidirectional, debounced).
 - Commands to create, convert, and open graph pairs.
 - Sherlock, Maigret, and Social Analyzer integration (external CLIs; not bundled).
-- Embedded Excel-modded runtime for `.sheet` files (disable the separate community **Excel** plugin to avoid duplicate registration).
+- Embedded Excel runtime for `.sheet` files (disable the separate community **Excel** plugin to avoid duplicate registration).
+- Works perfectly with the [@comshit](https://github.com/comwhore/comshit) scripts for CSV dumps.
 
 ## Requirements
 
