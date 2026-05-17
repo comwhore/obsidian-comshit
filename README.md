@@ -99,3 +99,5 @@ Spreadsheet code is derived from [obsidian-excel](https://github.com/ljcoder2015
 Third-party notices: [NOTICE](NOTICE).
 
 Use OSINT features responsibly and follow site terms of service and applicable law.
+
+<!-- Note, this project is pretty much early access, but who cares, it's also half vibecoded to steal shit from other plugins so it works. Larp larp larp sahur or whatever -->
