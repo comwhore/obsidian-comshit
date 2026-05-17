@@ -94,6 +94,8 @@ Plugin id: `comshit` (must stay unique in the directory).
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Third-party notices: [NOTICE](NOTICE).
+GNU General Public License v3.0 or later — see [LICENSE](LICENSE) and [COPYING](COPYING).
+Spreadsheet code is derived from [obsidian-excel](https://github.com/ljcoder2015/obsidian-excel) (GPLv3).
+Third-party notices: [NOTICE](NOTICE).
 
 Use OSINT features responsibly and follow site terms of service and applicable law.

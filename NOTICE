@@ -1,11 +1,25 @@
-comshit includes logic derived from Lovely-Mindmap:
-https://github.com/shaunhurryup/lovely-mindmap
-Licensed under MIT.
+comshit — third-party components
+================================
 
-comshit can integrate with Sherlock CLI:
-https://github.com/sherlock-project/sherlock
-Sherlock is a separate program and is not bundled.
+This plugin is distributed under GPLv3. See LICENSE and COPYING.
 
-The `excel-modded/` folder embeds sources from the Excel Obsidian plugin fork/mod; see that subtree for its own notices and licenses.
+obsidian-excel (excel-modded/)
+------------------------------
+Source: https://github.com/ljcoder2015/obsidian-excel
+License: GNU General Public License v3.0 or later
+The excel-modded/ tree and the embedded Excel runtime in release builds are
+derived from that project and modified for comshit.
 
-Use Sherlock responsibly and respect website Terms of Service and local laws.
+Lovely-Mindmap
+--------------
+Source: https://github.com/shaunhurryup/lovely-mindmap
+License: MIT
+Canvas mindmap keyboard behavior is derived from Lovely-Mindmap.
+
+External tools (not bundled)
+----------------------------
+- Sherlock: https://github.com/sherlock-project/sherlock
+- Maigret and Social Analyzer: separate installs; configure paths in settings.
+
+Use OSINT features responsibly and follow website terms of service and
+applicable law.
